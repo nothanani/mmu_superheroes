@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.home {
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(48, 53, 9, 0.9), rgba(211, 198, 123, 0.2)), url("../img/img1.jpg");
+  background-size: cover;
+  background-position: 20%;
+}
+.home_about {
+  background: linear-gradient(to bottom, rgba(48, 53, 9, 0.9), rgba(211, 198, 123, 0.2)), url("../img/img2.jpg");
+  background-size: cover;
+  background-position: 40%;
+  height: 100%;
+}
+
+.mmusuperlogo {
+  max-height: 20vh;
+  width: auto;
+  margin-top: 0;
+  top: 0;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  height: auto;
+}
+
+.mmusuper {
+  color: white;
+  font-weight: bolder;
+  font-weight: bolder;
+  font-size: 50px;
+  line-height: 40px;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  width: 28px;
+  line-height: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 4px;
+  background: rgb(5, 122, 20);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before { /*pseudo elements are used to modify a part of an element*/
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -9px;
+  width: 28px;
+  height: 4px;
+  background-color: rgb(59, 146, 51);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -18px;
+  width: 28px;
+  height: 4px;
+  background-color: rgb(60, 179, 80);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger.open {
+  transform: rotate(360deg);
+  background: transparent;
+}
+.menu-btn_burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+  background-color: rgb(0, 0, 0);
+}
+.menu-btn_burger.open::after {
+  background-color: rgb(0, 0, 0);
+  transform: rotate(-45deg) translate(-15px, 9px);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  visibility: hidden;
+}
+.nav.open {
+  visibility: visible;
+}
+.nav .menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+  background: linear-gradient(to bottom, #ffae00, rgba(218, 255, 221, 0.9));
+  list-style-type: none;
+  color: black;
+  padding-right: 10px;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.open {
+  transform: translateX(0);
+}
+.nav .menu-nav_item {
+  transform: translateX(100vw);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.open {
+  transform: translateX(0);
+}
+.nav .menu-nav_items_active > a {
+  color: rgb(255, 255, 255);
+}
+.nav .menu-nav-link {
+  display: inline;
+  font-size: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  padding: 20px 0;
+  text-shadow: 10;
+  color: darkgreen;
+  overflow: hidden;
+  font-weight: 30;
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav-link:hover {
+  color: rgb(255, 255, 255);
+}
+
+li {
+  margin: 20px;
+}
+
+.mmulogo {
+  display: flex;
+  max-width: 40%;
+  height: auto;
+}
+
+.mmusuperlogonav {
+  display: flex;
+  max-width: 50%;
+  height: auto;
+  transform: translate(100);
+}
+
+body {
+  top: 0;
+  background-color: rgb(17, 70, 143);
+  color: antiquewhite;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 100%;
+  font-style: italic;
+  overflow: hidden;
+  height: 100vh;
+}
+
+h1, h2, h3 {
+  font-weight: 20px;
+  text-align: center;
+  size: 60px;
+  color: rgb(255, 255, 255);
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main i {
+  color: rgb(254, 255, 255);
+}
+main i:hover {
+  color: rgb(218, 18, 18);
+  transition: all 0.5s ease-in-out;
+}
+main a {
+  text-decoration: none;
+}
+main a:hover {
+  color: rgb(4, 21, 98);
+}
+
+.social-icons {
+  text-align: center;
+}
+
+footer {
+  color: rgb(218, 18, 18);
+  size: 20px;
+  padding: 20px;
+  text-decoration: underline;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.158);
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  max-width: 50px;
+  padding: 20px;
+}/*# sourceMappingURL=club.css.map */
